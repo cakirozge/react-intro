@@ -1,6 +1,8 @@
 
 import { useEffect, useState } from 'react';
+
 import './App.css';
+import Workshop from './Workshop';
 
 
 //JSX => JavaScript + Html : JavaScript Xml açılımı
@@ -31,16 +33,22 @@ function App() {
   }, [total]);
 
 
+  const [date, setDate] = useState(new Date());
+  const [number, setNumber] = useState(10);
+
   return (
    <>
    
-   <p>Toplam Tıklama Sayısı: {total}</p>
+   {/* <p>Toplam Tıklama Sayısı: {total}</p>
    <button onClick={()=> {
     increase();
     console.log("+ butonuna basıldı.")
    }}>+</button>
-   <button onClick={()=>{decrease();}}>-</button> 
+   <button onClick={()=>{decrease();}}>-</button>  */}
 
+
+{/* Component isimleri daima büyük harfle yazılır. */}
+  <Workshop number={number} date={date} />
    
    </>
   );
@@ -59,4 +67,7 @@ function App() {
 //- tüm set; işemleri async'dır.
 export default App;
 
+
+//Ödev: todolist usestate ve use effect kullanarak yap 
+//İpucu: /*onChange={}*/
 
