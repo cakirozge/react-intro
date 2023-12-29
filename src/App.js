@@ -36,6 +36,11 @@ function App() {
   const [date, setDate] = useState(new Date());
   const [number, setNumber] = useState(10);
 
+  const exampleFunction =(arg1) =>{
+    console.log(arg1);
+    console.log("exampleFunction çalıştı.. ");
+  }
+
   return (
    <>
    
@@ -48,7 +53,7 @@ function App() {
 
 
 {/* Component isimleri daima büyük harfle yazılır. */}
-  <Workshop number={number} date={date} />
+  <Workshop func={exampleFunction} number={number} date={date} />
    
    </>
   );

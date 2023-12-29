@@ -41,6 +41,8 @@ function Workshop(props) {
         <ul>
           {todoList.map(todo => <li key={todo}>{todo} <button onClick={() => {remove(todo);}}  >X</button></li>)}
         </ul>
+
+        <button onClick={()=>{props.func("deneme1");}} >App.js deki fonksiyonu çalıştır.</button>
        </div>
       )
  
